@@ -22,16 +22,18 @@
 	        var defaults = {  
 			   length: 20,  
 			   ellipsisText: "..."  
-		};  
+			};  
 	  
 	        var options = $.extend(defaults, options);  
 	        
 	        return this.each(function(){
+	        
 			obj = $(this);  
 			var str = $.trim(obj.text()),
 			   	   strLen=str.length,
 				   optLen=options.length,
 				   len=0;
+				   
 			function cut(){
 		            for (var i=0; i<strLen; i++) {
 		                len += (str.charCodeAt(i) > 128) ? 2 : 1;
